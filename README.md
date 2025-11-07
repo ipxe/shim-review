@@ -87,6 +87,7 @@ https://github.com/ipxe/shim/tree/ipxe-16.1
 ### What patches are being applied and why:
 *******************************************************************************
 
+* [ipxe: Use iPXE Secure Boot CA certificate as vendor certificate](https://github.com/ipxe/shim/commit/d0367b25)
 * [ipxe: Add documentation](https://github.com/ipxe/shim/commit/76555293)
 * [ipxe: Allow next loader path to be derived from shim path](https://github.com/ipxe/shim/commit/1b02ba2c)
 * [ipxe: Add vendor SBAT data](https://github.com/ipxe/shim/commit/4048a557)
@@ -245,16 +246,17 @@ SSL.com EV Code Signing certificate.
 
 *******************************************************************************
 ### Do you use EV certificates as embedded certificates in the shim?
-*******************************************************************************
-
-Yes, the certificate [`ipxe.der`](ipxe.der) is an EV certificate
-issued by SSL.com.
-
-*******************************************************************************
 ### Are you embedding a CA certificate in your shim?
 *******************************************************************************
 
-No.
+As per the recommendation at
+https://github.com/rhboot/shim-review/issues/319#issuecomment-3488064312,
+the [vendor certificate](ipxe-sb-ca.der) is now a CA certificate.
+
+The CA certificate key pair and hardware security module provably meet
+the requirements for an EV certificate, as documented in extensive
+detail at https://github.com/ipxe/secure-boot-ca.  Please see the
+documentation there for further details.
 
 *******************************************************************************
 ### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( GRUB2, fwupd, fwupdate, systemd-boot, systemd-stub, shim + all child shim binaries )?
