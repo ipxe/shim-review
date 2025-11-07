@@ -36,7 +36,7 @@ RUN make -C shim/build-aa64 -f ../Makefile TOPDIR=.. \
 
 RUN mkdir -p /built
 
-RUN cp -f shim/build-*/shim*.efi /built/
+RUN cp -f shim/build-*/shim*.efi shim/build-*/shim*.efi.debug /built/
 
 #
 # Verify binaries match those being submitted
