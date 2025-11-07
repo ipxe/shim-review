@@ -233,9 +233,9 @@ Not applicable: this is a new submission.
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
-[`shimx64.efi`](shimx64.efi) 88ba41738f650b8376d4ce390fdb94315b02fc61ff83498f13e58949e4d74344
+[`shimx64.efi`](shimx64.efi) aa01568126a34c1530dcc6732c806951a9ffd0cf7aafff39a119a53620ea2be3
 
-[`shimaa64.efi`](shimaa64.efi) 1387aebc8b4c5c970c573c34f8e61763e66d4b3157e44196e5e3bd1b4ac2ccbd
+[`shimaa64.efi`](shimaa64.efi) 56193a8b919e596c5778617eed0ab74ca8fc2067561f6af831879a98c5988459
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your shim?
